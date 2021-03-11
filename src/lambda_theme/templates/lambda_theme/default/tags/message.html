@@ -1,0 +1,7 @@
+{% load lambda_theme_tags %}
+
+{% block content %}
+    {% alert with message=body|safe %}
+        {{ message }}
+    {% endalert %}
+{% endblock content %}

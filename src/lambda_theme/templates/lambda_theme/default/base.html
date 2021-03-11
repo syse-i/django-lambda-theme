@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% endblock %}
+    <title>{% block head_title %}{% endblock %}</title>
+    <!-- Styles -->
+    {% block styles %}{% endblock %}
+</head>
+<body>
+{% block content %}{% endblock %}
+<!-- Scripts -->
+{% block scripts %}{% endblock %}
+</body>
+</html>

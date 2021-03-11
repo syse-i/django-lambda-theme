@@ -1,0 +1,11 @@
+{% block content %}
+    {% if href %}
+        <a href="{{ href }}" {{ attributes }}>
+            {{ nodelist }}
+        </a>
+    {% else %}
+        <button {{ attributes }} type="{{ type }}">
+            {{ nodelist }}
+        </button>
+    {% endif %}
+{% endblock content %}

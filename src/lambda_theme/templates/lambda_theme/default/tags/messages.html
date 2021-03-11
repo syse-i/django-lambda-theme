@@ -1,0 +1,9 @@
+{% load lambda_theme_tags %}
+
+{% block content %}
+    {% if messages %}
+        {% for instance in messages %}
+            {% message instance %}
+        {% endfor %}
+    {% endif %}
+{% endblock content %}

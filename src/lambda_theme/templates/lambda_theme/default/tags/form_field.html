@@ -1,0 +1,38 @@
+{% load i18n %}
+{% load lambda_theme_tags %}
+
+{% block content %}
+    <div {{ attributes }}>
+        {% if field|is_checkbox %}
+            {% if show_label %}
+                <label for="{{ field.id_for_label }}">
+                    {{ field }}
+                    {% if field.field.required %}
+                        <b>{{ field.label }}</b>
+                    {% else %}
+                        {{ field.label }}
+                    {% endif %}
+                </label>
+            {% else %}
+                <div>{{ field }}</div>
+            {% endif %}
+        {% else %}
+            {% if show_label %}
+                <label for="{{ field.id_for_label }}">
+                    {% if field.field.required %}
+                        <b>{{ field.label }}</b>
+                    {% else %}
+                        {{ field.label }}
+                    {% endif %}
+                </label>
+            {% endif %}
+            <div>{{ field }}</div>
+        {% endif %}
+        <span>{{ field.help_text }}</span>
+        {% if field.errors %}
+            <div>
+                <strong>{{ field.errors|escape }}</strong>
+            </div>
+        {% endif %}
+    </div>
+{% endblock content %}

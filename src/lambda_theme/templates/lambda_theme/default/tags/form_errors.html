@@ -1,0 +1,18 @@
+{% load lambda_theme_tags %}
+
+{% block content %}
+    {% if form.errors %}
+        {% for field in form %}
+            {% for error in field.errors %}
+                {% alert with attributes=attributes label=field.label message=error|escape %}
+                    <strong {{ attributes }}>{{ label }}: {{ message }}</strong>
+                {% endalert %}
+            {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+            {% alert with attributes=attributes message=error|escape %}
+                <strong {{ attributes }}>{{ message }}</strong>
+            {% endalert %}
+        {% endfor %}
+    {% endif %}
+{% endblock content %}

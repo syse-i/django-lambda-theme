@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-component-tags = {path = "/Users/dsv/Developer/django_component_tags"}
+
+[dev-packages]
+django-debug-toolbar = "*"
+
+[requires]
+python_version = "3.8"

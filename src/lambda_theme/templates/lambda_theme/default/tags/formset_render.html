@@ -1,0 +1,13 @@
+{% load lambda_theme_tags %}
+{% load i18n %}
+
+<form method="{{ method }}" {{ attributes }}>
+    {% csrf_token %}
+    {{ formset.management_form }}
+    {% for form in formset %}
+        {% form_fields form %}
+    {% endfor %}
+    {% button type="submit" %}
+        {% trans 'Submit' %}
+    {% endbutton %}
+</form>

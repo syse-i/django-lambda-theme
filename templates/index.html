@@ -1,0 +1,45 @@
+{% extends 'lambda_theme/base.html' %}
+{% load lambda_theme_tags %}
+
+{% block content %}
+    <p>Message:</p>
+    {% messages %}
+    <hr>
+    <p>Alert:</p>
+    {% alert %}
+        Content
+    {% endalert %}
+    <hr>
+    <p>Button:</p>
+    {% for value in values %}
+        {% button click="foo" href='/' class="foo bar" with value=1 %}
+            Button {{ value }}
+            {% slot 'foo' %}
+                <span>Button Slot {{ value }}</span>
+            {% endslot %}
+        {% endbutton %}
+    {% endfor %}
+    <hr>
+    <p>Link:</p>
+    {% url 'index' as url_1 %}
+    {% url 'index' as url_2 %}
+    {% link href=url_1 %}
+        {% slot 'foo' %}
+            {% with '1' as value %}
+                <span>Slot {{ value }}</span>
+            {% endwith %}
+        {% endslot %}
+        Link
+    {% endlink %}
+    {% link href=url_2 %}Link2{% endlink %}
+    <hr>
+    <p>Form:</p>
+    {% form_render form class="form_render" %}
+    <hr>
+    <p>Formset:</p>
+    {% formset_render formset class="formset_render" %}
+    <hr>
+    <p>Form field:</p>
+    {% form_field form.search class="form_field" %}
+    <hr>
+{% endblock %}

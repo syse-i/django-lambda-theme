@@ -1,0 +1,17 @@
+{% load i18n %}
+{% load lambda_theme_tags %}
+
+{% block content %}
+    <form method="{{ method }}" {{ attributes }}>
+        {% csrf_token %}
+        {% block form_content %}
+            {% for form in forms %}
+                {% form_fields form %}
+            {% endfor %}
+            {% button type="submit" %}
+                {% trans 'Submit' %}
+            {% endbutton %}
+        {% endblock %}
+    </form>
+{% endblock content %}
+
