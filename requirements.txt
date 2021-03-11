@@ -6,8 +6,8 @@
 #
 
 -i https://pypi.org/simple
-/Users/dsv/Developer/django_component_tags
+-e git+ssh://git@github.com/syse-i/django_component_tags@c838301e4660b90ccfedab9db4504f493c89e1fd#egg=django-component-tags
 asgiref==3.3.1; python_version >= '3.5'
-django==3.1.6
+django==3.1.7
 pytz==2021.1
 sqlparse==0.4.1; python_version >= '3.5'

@@ -1,5 +1,5 @@
 ===================
-django_lambda_theme
+lambda_theme
 ===================
 
 

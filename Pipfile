@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 django = "*"
-django-component-tags = {path = "/Users/dsv/Developer/django_component_tags"}
+django-component-tags = {editable = true, git = "ssh://git@github.com/syse-i/django_component_tags"}
 
 [dev-packages]
 django-debug-toolbar = "*"

@@ -15,10 +15,6 @@ the sake of backward compatibility of the developer's workflow.
 import os
 import sys
 
-# This makes the package usable even without being installed with pip
-# (redundant in the case the developer uses `python setup.py develop`)
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
-
 
 def main():
     """Run administrative tasks."""

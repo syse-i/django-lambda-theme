@@ -1,8 +1,8 @@
 ===================
-django_lambda_theme
+lambda_theme
 ===================
 
-This is the documentation of **django_lambda_theme**.
+This is the documentation of **lambda_theme**.
 
 .. note::
 
