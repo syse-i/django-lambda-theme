@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "d87c878fc6f06f88805df04e614659b1b490cea54bbb7d975941f9f9117a6dde"
+            "sha256": "6c33e4d970ed85d68e7f2ea832110ac83f950e14d7e8c946a3a7e94f7147e52b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -34,7 +34,7 @@
         },
         "django-component-tags": {
             "editable": true,
-            "git": "ssh://git@github.com/syse-i/django_component_tags",
+            "git": "ssh://git@github.com/syse-i/django-component-tags",
             "ref": "c838301e4660b90ccfedab9db4504f493c89e1fd"
         },
         "pytz": {
