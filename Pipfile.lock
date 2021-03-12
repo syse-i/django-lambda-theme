@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "6c33e4d970ed85d68e7f2ea832110ac83f950e14d7e8c946a3a7e94f7147e52b"
+            "sha256": "7c89732d398240cb58d5fde92422f3c2b2a9022f1449cfcc8f0a98ac25b8386d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -35,7 +35,15 @@
         "django-component-tags": {
             "editable": true,
             "git": "ssh://git@github.com/syse-i/django-component-tags",
-            "ref": "c838301e4660b90ccfedab9db4504f493c89e1fd"
+            "ref": "0c5e2c1d81a6efa417f4963e9ea363b9a9bd855e"
+        },
+        "django-debug-toolbar": {
+            "hashes": [
+                "sha256:84e2607d900dbd571df0a2acf380b47c088efb787dce9805aefeb407341961d2",
+                "sha256:9e5a25d0c965f7e686f6a8ba23613ca9ca30184daa26487706d4829f5cfb697a"
+            ],
+            "index": "pypi",
+            "version": "==3.2"
         },
         "pytz": {
             "hashes": [
