@@ -29,7 +29,7 @@ class Button(template.Component):
 
     type = template.Attribute(choices=TypeChoices, default=TypeChoices.submit)
     click = template.Attribute(context_name='@click')
-    disabled = template.Attribute(default=False)
+    disabled = template.Attribute()
 
     href = template.Attribute(as_context=True)
 
