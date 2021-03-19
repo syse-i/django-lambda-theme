@@ -15,7 +15,7 @@ class Alert(template.Component):
 
 
 class Link(template.Component):
-    href = template.Attribute(default='#', as_context=True)
+    href = template.Attribute(as_context=True)
 
     class Meta:
         template_name = '@/tags/link.html'
@@ -31,7 +31,7 @@ class Button(template.Component):
     click = template.Attribute(context_name='@click')
     disabled = template.Attribute(default=False)
 
-    href = template.Attribute(default='#', as_context=True)
+    href = template.Attribute(as_context=True)
 
     class Meta:
         template_name = '@/tags/button.html'
