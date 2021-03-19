@@ -1,11 +1,8 @@
 from django.template.base import TemplateSyntaxError
 from django.template.loader_tags import construct_relative_path, ExtendsNode
 
-from component_tags.template.components import Slot
-
-from . import template
-from .helpers import parse_template_name, get_template_name
-from .tags import message, messages
+from .. import template
+from ..helpers import parse_template_name, get_template_name
 
 register = template.Library()
 
@@ -45,16 +42,3 @@ def do_extends(parser, token):
     if nodelist.get_nodes_by_type(ExtendsNode):
         raise TemplateSyntaxError("'%s' cannot appear more than once in the same template" % bits[0])
     return CustomExtendsNode(nodelist, parent_name)
-
-
-# Components
-
-register.tag('slot', Slot)
-
-# Tags
-
-# noinspection PyUnresolvedReferences
-register.inclusion_tag('@/tags/message.html')(message)
-# noinspection PyUnresolvedReferences
-register.inclusion_tag('@/tags/messages.html', takes_context=True)(messages)
-

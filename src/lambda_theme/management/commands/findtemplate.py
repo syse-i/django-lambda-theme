@@ -2,7 +2,10 @@
 import sys
 
 from django.core.management.base import LabelCommand
-from django.template import TemplateDoesNotExist, loader
+from django.template import loader
+from django.template.exceptions import TemplateDoesNotExist
+
+from ...helpers import get_template_name_list
 
 
 class Command(LabelCommand):
@@ -12,8 +15,9 @@ class Command(LabelCommand):
 
     def handle_label(self, template_path, **options):
         try:
-            template = loader.get_template(template_path).template
+            template_name_list = get_template_name_list(template_path)
+            template = loader.select_template(template_name_list).template
         except TemplateDoesNotExist:
             sys.stderr.write("No template found\n")
         else:
-            sys.stdout.write(self.style.SUCCESS((template.name)))
+            sys.stdout.write(template.name)

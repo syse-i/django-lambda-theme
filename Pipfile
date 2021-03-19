@@ -5,10 +5,14 @@ name = "pypi"
 
 [packages]
 django = "*"
-django-component-tags = {editable = true, git = "ssh://git@github.com/syse-i/django-component-tags"}
+django-component-tags = "*"
 
 [dev-packages]
 django-debug-toolbar = "*"
+setuptools = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-django = "*"
 
 [requires]
 python_version = "3.8"

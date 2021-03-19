@@ -8,14 +8,14 @@ __all__ = [
 
 
 class Alert(template.Component):
-    role = template.ContextAttribute(default='alert')
+    role = template.Attribute(default='alert', as_context=True)
 
     class Meta:
         template_name = '@/tags/alert.html'
 
 
 class Link(template.Component):
-    href = template.ContextAttribute(default='#')
+    href = template.Attribute(default='#', as_context=True)
 
     class Meta:
         template_name = '@/tags/link.html'
@@ -28,10 +28,10 @@ class Button(template.Component):
         submit = 'submit'
 
     type = template.Attribute(choices=TypeChoices, default=TypeChoices.submit)
-    click = template.Attribute(name='@click')
+    click = template.Attribute(context_name='@click')
     disabled = template.Attribute(default=False)
 
-    href = template.ContextAttribute(default='#')
+    href = template.Attribute(default='#', as_context=True)
 
     class Meta:
         template_name = '@/tags/button.html'

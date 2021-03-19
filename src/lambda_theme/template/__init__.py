@@ -1,4 +1,4 @@
-from component_tags.template.attributes import ClassAttribute, ContextAttribute, Attribute
+from component_tags.template.attributes import Attribute
 from component_tags.template.choices import AttributeChoices
 from component_tags.template.context import TagContext
 
@@ -8,8 +8,6 @@ from .library import Library
 __all__ = [
     'ComponentNode',
     'Library',
-    'ClassAttribute',
-    'ContextAttribute',
     'Attribute',
     'AttributeChoices',
     'TagContext',
